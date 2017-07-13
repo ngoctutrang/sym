@@ -1,0 +1,14 @@
+easy_admin:
+    site_name: 'ACME Megacorp.'
+    design:
+        theme: 'default'
+        brand_color: '#1ABC9C'
+        assets:
+            css:
+                # HTTP protocol-relative URL
+                - '/assets/test.css'
+
+
+    entities:
+         - AppBundle\Entity\Todo
+      

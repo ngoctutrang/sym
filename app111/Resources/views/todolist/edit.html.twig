@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+
+<h2 class="page-header">
+	
+	Create todo
+</h2>
+
+{% form_theme form with ['form/customfields.html.twig'] %}
+
+{{ form_start(form) }}
+
+{{ form_widget(form) }}
+{{ form_end(form) }}
+{% endblock %}

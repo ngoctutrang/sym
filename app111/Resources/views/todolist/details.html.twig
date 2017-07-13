@@ -1,0 +1,39 @@
+
+{% extends 'layout.html.twig' %}
+{% block body %}
+<a href="/" class="btn btn-default">Back to list todo</a>
+<h2 class="page-header">
+	
+	{{todo.name}}
+</h2>
+<table class="table table-condensed"> 
+	
+	<tbody> 
+		<tr> 
+			<th scope="row">Name</th> 
+			<td>{{todo.name}}</td> 
+
+		</tr> 
+		<tr> 
+			<th scope="row">Description</th> 
+			<td>{{todo.description}}</td> 
+			
+		</tr>
+		<tr> 
+			<th scope="row">Category</th> 
+			<td>{{todo.category}}</td> 
+			
+		</tr>
+		<tr> 
+			<th scope="row">Create Data</th> 
+			<td>{{todo.dueDate| date('F j, Y')}}</td> 
+			
+		</tr>
+		<tr> 
+			<th scope="row">Due Data</th> 
+			<td>{{todo.createDate| date('F j, Y')}}</td> 
+			
+		</tr>
+	</tbody> 
+</table>
+{% endblock %}

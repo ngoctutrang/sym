@@ -1,0 +1,17 @@
+{% extends 'bootstrap_3_layout.html.twig' %}
+{% block form_widget_simple %}
+    {{ parent() }}
+
+    {% for attrname, attrvalue in attr %}
+        {% if attrname == 'help' %}
+            <span class="help-block">{{ attrvalue|trans }}</span>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+{% block form_label %}
+    {{ parent() }}
+
+    {% if required %}
+        <span class="required" title="This field is required">*</span>
+    {% endif %}
+{% endblock %}

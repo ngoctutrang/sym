@@ -1,0 +1,8 @@
+{% extends "bootstrap_3_layout.html.twig" %}
+
+{% block number_widget %}
+    <div class="integer_widget_text">
+        {% set type = type|default('number') %}
+        {{ block('form_widget_simple') }}
+    </div>
+{% endblock %}
